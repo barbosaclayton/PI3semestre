@@ -4,6 +4,8 @@
  */
 package br.senac.projetointegrador.entidades;
 
+import java.sql.Date;
+import java.util.ArrayList;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,8 +18,16 @@ import lombok.Setter;
 
 public class Venda {
     private int idVenda;
-    private int qtd;
-    private Venda venda;
-    private Produto produto;
+    private Date dataVenda;
+    private Cliente cliente;
+    private ArrayList<vendaProduto> carrinho;
+
+ 
+
+    @Override
+    public String toString() {
+        return "Venda{" + "idVenda=" + idVenda + ", dataVenda=" + dataVenda + ", cliente=" + cliente + ", carrinho=" + carrinho + '}';
+    }
    
+    
 }
